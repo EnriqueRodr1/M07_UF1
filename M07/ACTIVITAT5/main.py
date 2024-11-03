@@ -5,21 +5,21 @@ import matplotlib.pyplot as plt
 def casos_totals_per_mes(df, paisos):
     resultats = {}
     for pais in paisos:
-        dades_pais = df[df['country'] == pais].groupby('date')['total_cases'].sum()
+        dades_pais = df[df['location'] == pais].groupby('date')['total_cases'].sum()
         resultats[pais] = dades_pais
     return resultats
 
 def morts_totals_per_mes(df, paisos):
     resultats = {}
     for pais in paisos:
-        dades_pais = df[df['country'] == pais].groupby('date')['total_deaths'].sum()
+        dades_pais = df[df['location'] == pais].groupby('date')['total_deaths'].sum()
         resultats[pais] = dades_pais
     return resultats
 
 def reproduction_rate_per_mes(df, paisos):
     resultats = {}
     for pais in paisos:
-        dades_pais = df[df['country'] == pais].groupby('date')['reproduction_rate'].mean()
+        dades_pais = df[df['location'] == pais].groupby('date')['reproduction_rate'].mean()
         resultats[pais] = dades_pais
     return resultats
 
@@ -55,21 +55,21 @@ def plot_reproduction_rate(resultats):
 def poblacio_per_ciutat(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        poblacio = df[df['city'] == ciutat]['population'].values[0]
+        poblacio = df[df['City'] == ciutat]['Population'].values[0]
         resultats[ciutat] = poblacio
     return resultats
 
 def densitat_km2(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        densitat = df[df['city'] == ciutat]['density_km2'].values[0]
+        densitat = df[df['City'] == ciutat]['Area (km²)'].values[0]
         resultats[ciutat] = densitat
     return resultats
 
 def densitat_m2(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        densitat = df[df['city'] == ciutat]['density_m2'].values[0]
+        densitat = df[df['City'] == ciutat]['Density (/km²)'].values[0]
         resultats[ciutat] = densitat
     return resultats
 
@@ -157,7 +157,7 @@ def plot_battery_power(resultats):
 # Función principal
 def main():
     # Análisis de COVID
-    df_covid = pd.read_csv('data/covid_data.csv')
+    df_covid = pd.read_csv('ACTIVITAT5/data/covid_data.csv')
     paisos = ['Spain', 'Italy', 'Germany', 'France', 'USA', 'Brazil', 'India', 'UK', 'Russia', 'Canada']
     casos = casos_totals_per_mes(df_covid, paisos)
     morts = morts_totals_per_mes(df_covid, paisos)
@@ -168,7 +168,7 @@ def main():
     plot_reproduction_rate(reproduction)
 
     # Análisis de Ciudades
-    df_cities = pd.read_csv('data/cities_data.csv')
+    df_cities = pd.read_csv('ACTIVITAT5/data/cities_data.csv')
     ciutats = ['Tokyo', 'Delhi', 'Shanghai', 'Sao Paulo', 'Mumbai', 'Cairo', 'Dhaka', 'Mexico City', 'Beijing', 'Osaka']
     poblacio = poblacio_per_ciutat(df_cities, ciutats)
     densitat_km2_resultats = densitat_km2(df_cities, ciutats)
@@ -179,7 +179,7 @@ def main():
     plot_density_m2(densitat_m2_resultats)
 
     # Análisis de Móviles
-    df_mobiles = pd.read_csv('data/mobile_data.csv')
+    df_mobiles = pd.read_csv('/ACTIVITAT5/data/mobile_data.csv')
     ids = [3, 13, 34, 56, 70, 85, 110, 120, 210, 400]
     clock_speeds = clock_speed(df_mobiles, ids)
     megapixels_values = megapixels(df_mobiles, ids)
