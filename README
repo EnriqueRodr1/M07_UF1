@@ -1,4 +1,6 @@
 Para la actividad 5 utilizaremos PANDAS + MATPLOTLIB:
 Para ello nos descargaremos los archivos CSV que tenemos la url en el practica y luego ejecutaremos el comando para instalarlo en el visual studio code:
 
-Primero descargamos los archivos csv y lo meteremos dentro de un carpeta, que esa carpeta estara dentro de ACTIVITAT5:
+Primero descargamos los archivos csv y lo meteremos dentro de un carpeta, que esa carpeta estara dentro de ACTIVITAT5.
+Con eso ficheros podremos ejecutar el main.py para que nos aparezca los graficos de los paises y ciudades donde aparecen las figuras de las muertes totales por mes y otras figuras mas.
+
