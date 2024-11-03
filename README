@@ -1,1 +1,4 @@
-README
+Para la actividad 5 utilizaremos PANDAS + MATPLOTLIB:
+Para ello nos descargaremos los archivos CSV que tenemos la url en el practica y luego ejecutaremos el comando para instalarlo en el visual studio code:
+
+Primero descargamos los archivos csv y lo meteremos dentro de un carpeta, que esa carpeta estara dentro de ACTIVITAT5:
