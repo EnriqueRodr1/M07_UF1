@@ -55,21 +55,21 @@ def plot_reproduction_rate(resultats):
 def poblacio_per_ciutat(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        poblacio = df[df['City'] == ciutat]['Population'].values[0]
+        poblacio = df[df['City'] == ciutat]['Population'].values[2]
         resultats[ciutat] = poblacio
     return resultats
 
 def densitat_km2(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        densitat = df[df['City'] == ciutat]['Area (km²)'].values[0]
+        densitat = df[df['City'] == ciutat]['Area (km²)'].values[3]
         resultats[ciutat] = densitat
     return resultats
 
 def densitat_m2(df, ciutats):
     resultats = {}
     for ciutat in ciutats:
-        densitat = df[df['City'] == ciutat]['Density (/km²)'].values[0]
+        densitat = df[df['City'] == ciutat]['Density (/km²)'].values[1]
         resultats[ciutat] = densitat
     return resultats
 
