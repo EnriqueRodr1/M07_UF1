@@ -14,3 +14,7 @@ Una vez hecho esto añadiremos los ficheros crud con python para realizar los ej
 crea el contenedor con la imagen de postgres y demas.
 No me deja poner capturas en el Readme, me sale un error, asi es que subire una carpeta aparte para poner lo que he ido haciendo
 durante la practica.
+
+En la carpeta de CAPTURAS M7 que subire aqui, mosttrare capturas de la base de datos, del codigo, creando el contenedor
+para el pgAdmin y en el Visual Studio, tambien probando la función del 'main', probando los ficheros create, read, delete y update.
+Y ademas tambien de como crear las tablas para la BBDD.
