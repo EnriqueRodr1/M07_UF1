@@ -4,3 +4,13 @@ Para ello nos descargaremos los archivos CSV que tenemos la url en el practica y
 Primero descargamos los archivos csv y lo meteremos dentro de un carpeta, que esa carpeta estara dentro de ACTIVITAT5.
 Con eso ficheros podremos ejecutar el main.py para que nos aparezca los graficos de los paises y ciudades donde aparecen las figuras de las muertes totales por mes y otras figuras mas.
 
+
+ACTIVITAT 7:
+Para la actividad 7 haremos un CRUD junto con docker-compose.yml y un main.py.
+Lo que haremos para empezar es crear una base de datos para configurarlo con el docker y poder hacer los ejercicios que se nos requiere,
+nos bajaremos el programa pgAdmin para crear la base de datos y sicronizarlo con el docker-compose.yml.
+
+Una vez hecho esto añadiremos los ficheros crud con python para realizar los ejercicios con la parte de conectarse a la BBDD,
+crea el contenedor con la imagen de postgres y demas.
+No me deja poner capturas en el Readme, me sale un error, asi es que subire una carpeta aparte para poner lo que he ido haciendo
+durante la practica.
