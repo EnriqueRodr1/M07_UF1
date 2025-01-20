@@ -1,42 +1,34 @@
 
 No me deja colocar imagenes en el README, entonces explicare aquí en el README paso por paso como he hecho la practicas,
-las imagenes las subire en una carpetas que se llamara 'CAPTURA_M7_aCT8'. Ahi estaran todas subidas de como funciona la
+las imagenes las subire en una carpetas que se llamara 'CAPTURA_M7_aCT9'. Ahi estaran todas subidas de como funciona la
 FASTAPI con la base de datos y el codigo con el BaseModel y como funciona en el POSTMAN y la conexión a la base de datos y
 finalmente como he creado la base de datos a HEISIsql mediante MYsql Cliente.
 
 
-ACTIVITAT 8:
+ACTIVITAT 9:
 Seguint la documentació oficial de FASTAPI caldrà fer l’activitat que es demana a continuació:
 
-1. Crear un projecte amb FASTAPI.
-- Para empezar utilizaremos los programas siguientes para hacer este practica de FASTAPI, tendremos el Visual Studio Code que 
-crearemos dos ficheros que seran main.py que tendremos el 'BaseModel' que tendremos la id, nombre, descripcion y mas campos.
-Y por otro lado creamos el fichero database.py que es para hacer la conexión directa a la bbdd y complementarla en el main.py.
+Llegir i provar Body-Fields de la documentació oficial. Fer commit de nom documentació body-fields.
 
-2. Crear al main.py una funció per a cada mètode (GET) HTTP retornant un diccionari des del return.
-(Crear una versió d’aquest tros de codi - commit)
-- Seguimos con el main.py que en este codigo tendremos diferentes codigos como el modelo de datos con BaseModel, las rutas y 
-endpoints con GET, para que lo busque con /items/ y /items/{item_id} y tendremos un /status/ para comprobar que el servidor 
-esta funcionando correctamente.
+Documentar al readme.md amb Postman.
 
-3. Probar amb SWAGGER que els endpoints funcionen.
-(Afegir captures de cada Mètode al README.md documentant els resultats)
+Llegir i provar Body-Nested Models de la documentació oficial. fer commit de nom documentació Body-Nested Models.
 
-4. Probar amb POSTMAN que els endpoints funcionen.
-(Afegir captures de cada Mètode al README.md documentant els resultats)
-- Una vez que hemos creado la base de datos y la hayamos sicronizado en el database.py y configurada en el main.py, ahora 
--miraremos si lo los endpoints funcionan, para ello utilizaremos el POSTMAN, utilizaremos 'GET' y introduciremos la direccion
-siguiente 'http://127.0.0.1:8000/items/' y nos mostrara los datos de la tabla items con su id, nombre y demas campos. Tambièn
-podremos buscarlo por id como por ejemplo 'http://127.0.0.1:8000/items/1' con el GET y si introducimos la dirección
-'http://127.0.0.1:8000/status' nos mostrara un mensaje de que el sercvidor esta en funcionamiento.
+Documentar al Readme.md amb Swagger.
 
-5. Fer les modificacions necessàries per treballar amb BaseModel en un mètode POST.
-(Crear un schema amb 6 camps, un dels camps ha de ser opcional)
+Cal fer commit dels punts 2 i 4.
 
-6. Si el mètode get no detecta un registre caldrà mostrar un error 404 amb response.
-(Crear una versió d’aquest tros de codi - commit)
+Connectar amb PostgreSQL la consulta read_users amb FASTAPI. 
+Caldrà tindre una taula de nom users creat a la BD per a que amb un endpoint /users/ rebi, el client en format json, tots els usuaris de la taula.
+Cal treballar amb schema.
 
-7. Modificar la mostra de l’error canviant la utilització de response per HTTPException
-(Crear una versió d’aquest tros de codi - commit)
+Fer commit del punt 6.
 
+Cal estructurar els arxius de la següent manera:
+Carpeta db_connect hi trobarem l’arxiu de connexió a postgres.
+Carpeta schemas hi trobarem l’arxiu amb els esquemes de usuaris.
+Carpeta crud hi trobarem l’arxiu amb el crud d’usuaris.
 
+Documentar amb Postman.
+
+Fer un commit amb el punt 9.
