@@ -1,20 +1,18 @@
-from typing import Annotated
-from fastapi import Body, FastAPI
+from fastapi import FastAPI, Body
 from pydantic import BaseModel, Field
+from typing import Annotated, Optional
 
 app = FastAPI()
 
-
-class Item(BaseModel):
-    name: str
-    description: str | None = Field(
-        default=None, title="The description of the item", max_length=300
+class Articulo(BaseModel):
+    titulo: str
+    resumen: Optional[str] = Field(
+        default=None, title="Resumen del artículo", max_length=500
     )
-    price: float = Field(gt=0, description="The price must be greater than zero")
-    tax: float | None = None
+    precio: float = Field(gt=0, description="El precio debe ser un número positivo")
+    tasa_impuesto: Optional[float] = None
 
-
-@app.put("/items/{item_id}")
-async def update_item(item_id: int, item: Annotated[Item, Body(embed=True)]):
-    results = {"item_id": item_id, "item": item}
-    return results
+@app.put("/articulos/{id_articulo}")
+async def actualizar_articulo(id_articulo: int, articulo: Annotated[Articulo, Body(embed=True)]):
+    respuesta = {"id_articulo": id_articulo, "articulo": articulo}
+    return respuesta
