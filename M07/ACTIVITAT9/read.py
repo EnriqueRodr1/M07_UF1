@@ -1,9 +1,9 @@
-import conn
+import conection
 
 def read_users():
 
-    conn = conn.connect_db
-    cursor = conn.cursor()
+    conection = conection.connect_db
+    cursor = conection.cursor()
 
     sql_read_users = "SELECT * FROM users"
 
